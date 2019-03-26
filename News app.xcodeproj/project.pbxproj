@@ -111,11 +111,11 @@
 		9459773E22491AB200CE8422 /* News app */ = {
 			isa = PBXGroup;
 			children = (
-				9459774622491AB300CE8422 /* Assets.xcassets */,
 				9459776F22491BA600CE8422 /* Config */,
 				9459776322491B7F00CE8422 /* Controller */,
 				9459776722491B7F00CE8422 /* Model */,
-				9459776122491B7F00CE8422 /* Services */,
+				94597770224A03CF00CE8422 /* Resources */,
+				9459776122491B7F00CE8422 /* Network */,
 				9459776622491B7F00CE8422 /* view */,
 			);
 			path = "News app";
@@ -130,12 +130,12 @@
 			path = "News appTests";
 			sourceTree = "<group>";
 		};
-		9459776122491B7F00CE8422 /* Services */ = {
+		9459776122491B7F00CE8422 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				9459776222491B7F00CE8422 /* ApiService.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9459776322491B7F00CE8422 /* Controller */ = {
@@ -169,6 +169,14 @@
 				9459773F22491AB200CE8422 /* AppDelegate.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		94597770224A03CF00CE8422 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9459774622491AB300CE8422 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

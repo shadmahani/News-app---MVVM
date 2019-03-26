@@ -10,7 +10,6 @@ import UIKit
 
 class MainVC: UITableViewController {
     
-    let tableCellId = "tableCellId"
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
