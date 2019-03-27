@@ -10,28 +10,29 @@ import Foundation
 import UIKit
 
 class MainViewModel {
-    
-    var article: Article
-    
-    public init(article: Article) {
-        self.article = article
-    }
-    var title: String {
-        return article.title
-    }
 
-    var author: String {
-        return article.author
-    }
-    var imageUrl: String {
-       
-        return article.imageUrl
+    var articles = [Article]()
+   
+    var title: String {
+        return "this is \(articles)"
     }
 }
 extension MainViewModel {
-    func config(_ view: CollectionViewCell){
+
+    func config(view: CollectionViewCell){
         view.titleLbl.text = title
-        view.articleImageView.downloadImageWithCache(stringUrl: imageUrl)
+    }
+    func fetchData(completion: @escaping ()->Void){
+                ApiService.shared.getArticles { (success, err,article)  in
+                    if success {
+                        print("ok")
+                        self.articles = article!
+                        completion()
+//                        self.articles = article ?? []
+//                        self.mainViewModel = article!.map({return MainViewModel(article: $0)})
+//                        self.collectionView.reloadData()
+                    }
+                }
     }
     
     
