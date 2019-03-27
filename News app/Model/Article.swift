@@ -8,13 +8,13 @@
 
 import Foundation
 struct Article {
-    let sources: [String:Any]
+//    let sources: [String:Any]
     let author: String
     let title: String
-    let description: String
+//    let description: String
     let imageUrl: String
-    let publishData: String
-    let content: String
+//    let publishData: String
+//    let content: String
 }
 
 struct Source {
