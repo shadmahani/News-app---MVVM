@@ -114,6 +114,7 @@
 		9459773322491AB200CE8422 = {
 			isa = PBXGroup;
 			children = (
+				943C7F12224F805E00F24908 /* README.md */,
 				9459773E22491AB200CE8422 /* News app */,
 				9459775322491AB300CE8422 /* News appTests */,
 				9459773D22491AB200CE8422 /* Products */,
@@ -142,7 +143,6 @@
 				945977A7224A9D3D00CE8422 /* Tools */,
 				9459776F22491BA600CE8422 /* Config */,
 				94597770224A03CF00CE8422 /* Resources */,
-				943C7F12224F805E00F24908 /* README.md */,
 			);
 			path = "News app";
 			sourceTree = "<group>";
