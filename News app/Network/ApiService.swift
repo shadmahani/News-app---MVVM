@@ -11,36 +11,36 @@ import Alamofire
 import SwiftyJSON
 
 class ApiService {
-    static let shared = ApiService()
-    let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0b96a00decae41f8977d19b8b260453f"
     
-    func getArticles(completion: @escaping (_ success: Bool,_ err: Error?,_ articles: [Article]?)->()){
+   // class instance
+    static let shared = ApiService()
+     private init(){}
+    let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0b96a00decae41f8977d19b8b260453f"
+    // completionHandler
+    typealias Result<T> = (_ success: Bool,_ value: T?,_ err: Error?)->Void
+    
+    
+    func getArticles(completion: @escaping Result<[Articles]>){
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (res) in
             guard res.result.error == nil else {
-                completion(false,res.result.error, nil)
+                completion(false,nil,res.result.error)
                 return}
-            var articles = [Article]()
+            var articles = [Articles]()
             guard let data = res.data else{return}
             do {
                 let data = try JSON(data: data)
                 for article in data["articles"].arrayValue {
-                    let autor = article["author"].stringValue
                     let imageUrl = article["urlToImage"].stringValue
                     let title = article["title"].stringValue
-                    let article = Article(author: autor, title: title, imageUrl: imageUrl)
+                    let content = article["content"].stringValue
+                    let article = Articles(title: title, imageUrl: imageUrl, content: content)
                     articles.append(article)
-                    
                 }
-                completion(true, nil, articles)
+                completion(true,articles,nil)
             }catch let err{
                 print(err)
             }
         }
     }
 }
-//let sources = article["source"].dictionaryValue
-//let author = article["author"].stringValue
-//let description = article["description"].stringValue
-//let imageUrl = article["imageUrl"].stringValue
-//let publishData = article["publishdate"].stringValue
-//let content = article["content"].stringValue
+

@@ -1,5 +1,5 @@
 //
-//  News.swift
+//  Article.swift
 //  MVVM paractice
 //
 //  Created by hossein shademany on 3/25/19.
@@ -7,8 +7,10 @@
 //
 
 import Foundation
-struct News {
-    let status: String
-    let totalResult: String
-    let articles: [Articles]
+
+struct Articles {
+    let title: String
+    let imageUrl: String
+    let content: String
 }
+

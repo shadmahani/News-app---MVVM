@@ -9,5 +9,5 @@
 import Foundation
 
 enum IDs: String {
-    case mainViewCollection = "mainviewId"
+    case articleCollectionCell = "articleCollectionCell"
 }
