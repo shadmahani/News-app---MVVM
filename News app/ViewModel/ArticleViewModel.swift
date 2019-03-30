@@ -11,7 +11,7 @@ import UIKit
 
 class ArticleViewModel {
     // of type abservable for observing changes
-    var articles = Observable<[Articles]>([])
+    var articles = Observable<[Article]>([])
     
     var articleCount: Int {
         return articles.value.count

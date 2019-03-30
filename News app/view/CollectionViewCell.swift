@@ -28,7 +28,6 @@ class CollectionViewCell: UICollectionViewCell {
     }()
     var titleLbl: UILabel = {
         let lbl = UILabel()
-        lbl.text = "test"
         lbl.textColor = .white
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
@@ -55,6 +54,16 @@ class CollectionViewCell: UICollectionViewCell {
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadius).cgPath
+        containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        containerView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        containerView.layer.shadowRadius = 5
+        containerView.layer.shadowOpacity = 1
     }
     // MARK:- Setup
     func constaintSetup(){
@@ -93,14 +102,5 @@ class CollectionViewCell: UICollectionViewCell {
             ])
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        containerView.layer.cornerRadius = cornerRadius
-        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadius).cgPath
-        containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-        containerView.layer.shadowOffset = CGSize(width: 2, height: 2)
-        containerView.layer.shadowRadius = 5
-        containerView.layer.shadowOpacity = 1
-    }
+    
 }

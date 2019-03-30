@@ -9,12 +9,11 @@
 import UIKit
 
 class TopArticleVC: UICollectionViewController {
-    
+    // MARK:- Instance
     var viewModel = ArticleViewModel()
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionViewSetup()
         viewSetup()
         viewModel.fetchData()
@@ -23,6 +22,7 @@ class TopArticleVC: UICollectionViewController {
             self.collectionView.reloadData()
         }
     }
+    
     // MARK:- Setup
     func viewSetup(){
         view.backgroundColor = #colorLiteral(red: 0.08132412285, green: 0.1745293736, blue: 0.3156577349, alpha: 1)

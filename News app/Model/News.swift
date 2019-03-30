@@ -10,5 +10,5 @@ import Foundation
 struct News {
     let status: String
     let totalResult: String
-    let articles: [Articles]
+    let articles: [Article]
 }
