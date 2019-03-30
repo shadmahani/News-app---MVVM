@@ -10,7 +10,7 @@
 
 - resive data form api
 - bouncing article image
-- shadow + corner radius for collection view
+- shadow + corner radius for collection view 
 
 
 
