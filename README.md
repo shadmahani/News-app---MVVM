@@ -5,7 +5,9 @@
 ## open soruce news app with mvvm architecture using [news api][source]  
 
 <img src="https://github.com/shadmahani/News-app---MVVM/blob/master/Media/ezgif.com-optimize.gif" width="30%">
-
+```swift
+var smable: String
+```
 # New Features!
 
 - resive data form api
