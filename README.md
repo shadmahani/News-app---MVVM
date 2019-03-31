@@ -1,6 +1,6 @@
 # MVVM architecture sample project
 
-
+![project gif](https://github.com/shadmahani/News-app---MVVM/blob/master/Media/ezgif.com-optimize.gif)
 ![Swift](https://img.shields.io/badge/swift-4.2-orange.svg)   ![open source](https://img.shields.io/badge/open-source-green.svg) ![MVVM architecture](https://img.shields.io/badge/MVVM-architecture-blue.svg)
 
 ## open soruce news app with mvvm architecture using [news api][source]  
