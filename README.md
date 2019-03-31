@@ -5,8 +5,13 @@
 ## open soruce news app with mvvm architecture using [news api][source]  
 
 <img src="https://github.com/shadmahani/News-app---MVVM/blob/master/Media/ezgif.com-optimize.gif" width="30%">
+
 ```swift
-var smable: String
+if let statusesArray = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: Any]],
+    let user = statusesArray[0]["user"] as? [String: Any],
+    let username = user["name"] as? String {
+    // Finally we got the username
+}
 ```
 # New Features!
 
