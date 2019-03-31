@@ -16,11 +16,13 @@ class ApiService {
     static let shared = ApiService()
      private init(){}
     
-    let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0b96a00decae41f8977d19b8b260453f"
+    //TODO: Replace this with YOUR api key from newsapi.org ---
+    let yourApiKey = ""
     // completionHandler
     typealias Result<T> = (_ success: Bool,_ value: T?,_ err: Error?)->Void
     
     func getArticles(completion: @escaping Result<[Article]>){
+        let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=\(yourApiKey)"
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (res) in
             guard res.result.error == nil else {
                 completion(false,nil,res.result.error)
