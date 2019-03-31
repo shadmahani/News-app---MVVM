@@ -24,3 +24,9 @@ for this project follwing libraries were used:
 - observer - for binding data from ViewModel to viewController
 - imageDownloader - for downloading and caching images from API
 
+### note
+in order to run the app you need to add your apiKey from newsapi.org in ApiService.swift file
+```swift
+//TODO: Replace this with YOUR api key from newsapi.org ---
+    let yourApiKey = ""
+```
